@@ -7,9 +7,10 @@ class MyAppbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 200),
       alignment: Alignment.center,
-      color: Theme.of(context).appBarTheme.backgroundColor,
+      color: Colors.amber, //Theme.of(context).appBarTheme.backgroundColor,
       height: context.insets.appBarHeight,
       padding: EdgeInsets.symmetric(horizontal: context.insets.padding),
       child: ConstrainedBox(
@@ -18,10 +19,11 @@ class MyAppbar extends StatelessWidget {
           children: [
             AppLogo(),
             Spacer(),
-            AppMenus(),
+            if (context.isDesktop) AppMenus(),
             Spacer(),
             LanguageToggle(),
             ThemeToggle(),
+            if (!context.isDesktop) Icon(Icons.menu_outlined),
           ],
         ),
       ),
