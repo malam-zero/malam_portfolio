@@ -10,4 +10,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get home => 'Home';
+
+  @override
+  String get about => 'About';
+
+  @override
+  String get nav_skills_projects => 'Skills & Projects';
+
+  @override
+  String get nav_experience_publication => 'Experience & Publication';
+
+  @override
+  String get nav_contact => 'Contact';
 }

@@ -103,6 +103,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Home'**
   String get home;
+
+  /// No description provided for @about.
+  ///
+  /// In en, this message translates to:
+  /// **'About'**
+  String get about;
+
+  /// No description provided for @nav_skills_projects.
+  ///
+  /// In en, this message translates to:
+  /// **'Skills & Projects'**
+  String get nav_skills_projects;
+
+  /// No description provided for @nav_experience_publication.
+  ///
+  /// In en, this message translates to:
+  /// **'Experience & Publication'**
+  String get nav_experience_publication;
+
+  /// No description provided for @nav_contact.
+  ///
+  /// In en, this message translates to:
+  /// **'Contact'**
+  String get nav_contact;
 }
 
 class _AppLocalizationsDelegate

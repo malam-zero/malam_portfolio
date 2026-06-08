@@ -1,4 +1,7 @@
 {
   "home": "Home",
-  "@home": {}
+  "about": "About",
+  "nav_skills_projects": "Skills & Projects",
+  "nav_experience_publication": "Experience & Publication",
+  "nav_contact": "Contact"
 }

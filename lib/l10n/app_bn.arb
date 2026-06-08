@@ -1,4 +1,7 @@
 {
   "home": "হোম",
-  "@home": {}
+  "about": "আমার সম্পর্কে",
+  "nav_skills_projects": "দক্ষতা ও প্রকল্প",
+  "nav_experience_publication": "অভিজ্ঞতা ও প্রকাশনা",
+  "nav_contact": "যোগাযোগ"
 }

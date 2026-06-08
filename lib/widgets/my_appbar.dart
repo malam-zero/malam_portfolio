@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:malam_portfolio/l10n/app_localizations.dart';
+import 'package:malam_portfolio/utils/extensions.dart';
 
 class MyAppbar extends StatelessWidget {
   const MyAppbar({super.key});
@@ -35,11 +35,15 @@ class AppMenus extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(AppLocalizations.of(context)!.home),
-        Text("About"),
-        Text("Skills & Projects"),
-        Text("Experience & Publication"),
-        Text("Contact"),
+        Text(context.texts.home),
+        const SizedBox(width: 12),
+        Text(context.texts.about),
+        const SizedBox(width: 12),
+        Text(context.texts.nav_skills_projects),
+        const SizedBox(width: 12),
+        Text(context.texts.nav_experience_publication),
+        const SizedBox(width: 12),
+        Text(context.texts.nav_contact),
       ],
     );
   }
@@ -55,7 +59,6 @@ class LanguageToggle extends StatelessWidget {
         return [
           PopupMenuItem(child: Text('English')),
           PopupMenuItem(child: Text('Bangla')),
-          PopupMenuItem(child: Text('French')),
         ];
       },
     );
