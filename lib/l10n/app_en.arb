@@ -1,7 +1,13 @@
 {
+  "@@locale": "en",
   "home": "Home",
+  "@home": {},
   "about": "About",
+  "@about": {},
   "nav_skills_projects": "Skills & Projects",
+  "@nav_skills_projects": {},
   "nav_experience_publication": "Experience & Publication",
-  "nav_contact": "Contact"
+  "@nav_experience_publication": {},
+  "nav_contact": "Contact",
+  "@nav_contact": {}
 }

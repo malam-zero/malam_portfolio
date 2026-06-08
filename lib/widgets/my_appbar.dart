@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:malam_portfolio/utils/app_size.dart';
 import 'package:malam_portfolio/utils/extensions.dart';
 
 class MyAppbar extends StatelessWidget {
@@ -6,15 +7,24 @@ class MyAppbar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        AppLogo(),
-        Spacer(),
-        AppMenus(),
-        LanguageToggle(),
-        Spacer(),
-        ThemeToggle(),
-      ],
+    return Container(
+      alignment: Alignment.center,
+      color: Theme.of(context).appBarTheme.backgroundColor,
+      height: context.insets.appBarHeight,
+      padding: EdgeInsets.symmetric(horizontal: context.insets.padding),
+      child: ConstrainedBox(
+        constraints: BoxConstraints(maxWidth: Insets.maxWidth),
+        child: Row(
+          children: [
+            AppLogo(),
+            Spacer(),
+            AppMenus(),
+            Spacer(),
+            LanguageToggle(),
+            ThemeToggle(),
+          ],
+        ),
+      ),
     );
   }
 }
