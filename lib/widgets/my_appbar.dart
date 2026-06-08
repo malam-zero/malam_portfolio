@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:malam_portfolio/l10n/app_localizations.dart';
 
 class MyAppbar extends StatelessWidget {
   const MyAppbar({super.key});
@@ -34,7 +35,7 @@ class AppMenus extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text("Home"),
+        Text(AppLocalizations.of(context)!.home),
         Text("About"),
         Text("Skills & Projects"),
         Text("Experience & Publication"),
