@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:malam_portfolio/constants/app_menu_list.dart';
 import 'package:malam_portfolio/utils/app_size.dart';
+import 'package:malam_portfolio/utils/app_text_styles.dart';
 import 'package:malam_portfolio/utils/extensions.dart';
 import 'package:malam_portfolio/widgets/AppBar/appbar_drawer_icon.dart';
 
@@ -11,7 +13,7 @@ class MyAppbar extends StatelessWidget {
     return AnimatedContainer(
       duration: Duration(milliseconds: 200),
       alignment: Alignment.center,
-      color: Colors.amber, //Theme.of(context).appBarTheme.backgroundColor,
+      color: context.theme.appBarTheme.backgroundColor,
       height: context.insets.appBarHeight,
       padding: EdgeInsets.symmetric(horizontal: context.insets.padding),
       child: ConstrainedBox(
@@ -20,7 +22,7 @@ class MyAppbar extends StatelessWidget {
           children: [
             AppLogo(),
             Spacer(),
-            if (context.isDesktop) AppMenus(),
+            if (context.isDesktop) LargeMenu(),
             Spacer(),
             LanguageToggle(),
             ThemeToggle(),
@@ -41,23 +43,48 @@ class AppLogo extends StatelessWidget {
   }
 }
 
-class AppMenus extends StatelessWidget {
-  const AppMenus({super.key});
+class LargeMenu extends StatelessWidget {
+  const LargeMenu({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: [
-        Text(context.texts.home),
-        const SizedBox(width: 12),
-        Text(context.texts.about),
-        const SizedBox(width: 12),
-        Text(context.texts.nav_skills_projects),
-        const SizedBox(width: 12),
-        Text(context.texts.nav_experience_publication),
-        const SizedBox(width: 12),
-        Text(context.texts.nav_contact),
-      ],
+      children: AppMenuList.getItems(context)
+          .map(
+            (AppMenu e) => LargeAppBarMenuItem(
+              isSelected: true,
+              text: e.title,
+              onTap: () {},
+            ),
+          )
+          .toList(),
+    );
+  }
+}
+
+class LargeAppBarMenuItem extends StatelessWidget {
+  const LargeAppBarMenuItem({
+    super.key,
+    required this.isSelected,
+    required this.text,
+    required this.onTap,
+  });
+
+  final String text;
+  final bool isSelected;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        padding: EdgeInsets.symmetric(
+          horizontal: Insets.md,
+          vertical: Insets.xsm,
+        ),
+        child: Text(text, style: SmallTextStyles().bodyLgMedium),
+      ),
     );
   }
 }

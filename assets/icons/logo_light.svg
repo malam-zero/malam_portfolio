@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="MA_Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 400" xml:space="preserve">
+<style type="text/css">
+    .bg-light { fill: #ffffff00; }
+    .stroke-dark { fill: none; stroke: #22252a; stroke-width: 24; stroke-linecap: round; stroke-linejoin: round; }
+</style>
+
+<g id="Light_Theme">
+    <rect x="0" y="0" class="bg-light" width="400" height="400"/>
+    
+    <g transform="translate(47.5, 95)">
+        <path class="stroke-dark" d="M 40,160 L 95,50 C 100,40 115,40 120,50 L 145,100" />
+        <path class="stroke-dark" d="M 130,160 L 185,50 C 190,40 205,40 210,50 L 265,160" />
+        <path class="stroke-dark" d="M 152,115 C 170,115 180,115 228,115" />
+    </g>
+</g>
+
+<line x1="400" y1="0" x2="400" y2="400" stroke="#33373e" stroke-width="1" stroke-dasharray="5,5" />
+</svg>

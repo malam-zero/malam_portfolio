@@ -1,0 +1,31 @@
+
+<svg version="1.1" id="MA_Lam_Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 900 450" xml:space="preserve">
+<style type="text/css">
+    .bg-light { fill: #ffffff00; }
+    .stroke-dark { fill: none; stroke: #22252a; stroke-width: 24; stroke-linecap: round; stroke-linejoin: round; }
+</style>
+
+<rect x="0" y="0" class="bg-light" width="900" height="450"/>
+
+<g transform="translate(122.5, 110)">
+    <g transform="translate(35, 7)">
+        <path class="stroke-dark" d="M 40,160 L 95,50 C 100,40 115,40 120,50 L 145,100" />
+        <path class="stroke-dark" d="M 130,160 L 185,50 C 190,40 205,40 210,50 L 265,160" />
+        <path class="stroke-dark" d="M 152,115 C 170,115 180,115 228,115" />
+    </g>
+    <g id="lam_text" transform="matrix(1 0 0 0.71 -140 -10.35)">
+        <path class="stroke-dark" d="M 465,83 L 465,250" />
+        
+        <path class="stroke-dark" d="M 590,185 C 590,140 555,135 530,135 C 500,135 495,165 495,190 C 495,215 500,240 530,240 C 560,240 590,225 590,185 Z" />
+        <path class="stroke-dark" d="M 590,135 L 590,240" />
+        
+        <path class="stroke-dark" d="M 645,140 L 645,240" />
+        <path class="stroke-dark" d="M 645,175 C 645,130 695,130 695,165 L 695,240" />
+        <path class="stroke-dark" d="M 695,175 C 695,130 745,130 745,165 L 745,240" />
+    </g>
+    
+    
+</g>
+
+</svg>
+
