@@ -4,6 +4,7 @@ import 'package:malam_portfolio/utils/app_size.dart';
 import 'package:malam_portfolio/utils/app_text_styles.dart';
 import 'package:malam_portfolio/utils/extensions.dart';
 import 'package:malam_portfolio/widgets/AppBar/appbar_drawer_icon.dart';
+import 'package:malam_portfolio/widgets/language_switch.dart';
 
 class MyAppbar extends StatelessWidget {
   const MyAppbar({super.key});
@@ -24,7 +25,7 @@ class MyAppbar extends StatelessWidget {
             Spacer(),
             if (context.isDesktop) LargeMenu(),
             Spacer(),
-            LanguageToggle(),
+            LanguageSwitch(),
             ThemeToggle(),
             if (!context.isDesktop) AppbarDrawerIcon(),
           ],
@@ -85,22 +86,6 @@ class LargeAppBarMenuItem extends StatelessWidget {
         ),
         child: Text(text, style: SmallTextStyles().bodyLgMedium),
       ),
-    );
-  }
-}
-
-class LanguageToggle extends StatelessWidget {
-  const LanguageToggle({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return PopupMenuButton(
-      itemBuilder: (context) {
-        return [
-          PopupMenuItem(child: Text('English')),
-          PopupMenuItem(child: Text('Bangla')),
-        ];
-      },
     );
   }
 }

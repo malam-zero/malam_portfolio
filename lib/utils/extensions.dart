@@ -48,4 +48,6 @@ extension StyledContext on BuildContext {
         return LargeInsets();
     }
   }
+
+  ColorScheme get colorScheme => theme.colorScheme;
 }
